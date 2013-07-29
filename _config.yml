@@ -1,0 +1,5 @@
+name: HenrikTudborg.github.io
+safe: true
+lsi: false
+markdown: redcarpet
+pygments: true
