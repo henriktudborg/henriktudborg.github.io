@@ -1,5 +1,7 @@
-name: HenrikTudborg.github.io
+name: tudb.org
 safe: true
 lsi: false
 markdown: redcarpet
 pygments: true
+permalink: "/articles/:year/:month/:day/:title"
+exclude: ["README.markdown"]

@@ -7,39 +7,44 @@
             {{ page.title }} - {{site.name}}
         </title>
         <meta name="viewport" content="width=device-width">
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'>
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
     </head>
     <body>
-        <div class="site">
-            <div class="header">
-                <h1 class="title">
-                    <a href="/">{{ site.name }}</a>
-                </h1>
-                <a class="extra" href="/">home</a>
+        <div id="nav-wrap">
+            <nav id="nav">
+                <ul>
+                    <li><a href="/?ref=logo"><img id="logo" src="/css/icon.png" alt="logo" /></a></li>
+                    <li><a href="/?ref=menu">Articles</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="content-wrap">
+            <div id="content">
+                {{content}}
             </div>
-            {{ content }}
-            <div class="footer">
-                <div class="contact">
-                    <p>
-                        Henrik Tudborg
-                        <br />
-                        Developer at eTilbudsavis
-                        <br />
-                        henrik@tudb.org
-                    </p>
+        </div>
+
+        <div id="foot-wrap">
+            <footer>
+                <div class="footer-fieldset">
+                    <div class="footer-legend">about</div>
+                    <div class="footer-fieldset-inner">
+                        <p>I am a software engineer at eTilbudsavis</p>
+                    </div>
                 </div>
-                <div class="contact">
-                    <p>
-                        <a href="http://github.com/henriktudborg/">github.com/henriktudborg</a>
-                        <br />
-                        <a href="http://twitter.com/henriktudborg/">twitter.com/henriktudborg</a>
-                        <br />
-                    </p>
+                <div class="footer-fieldset">
+                    <div class="footer-legend">contact</div>
+                    <div class="footer-fieldset-inner">
+                        <p>Want to say 'hi'? <script>document.write("hen-rik#@#tu#d-b.#or#g".replace(/#|-/g,""))</script></p>
+                    </div>
                 </div>
-            </div>
+            </footer>
         </div>
     </body>
 </html>
