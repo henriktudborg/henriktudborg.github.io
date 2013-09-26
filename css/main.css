@@ -7,32 +7,106 @@ html, body {
 }
 
 body {
-  background-color: #303030;
+  background-color: #0a0a0a;
   font-weight: lighter;
   font-size: 100%;
   font-family: 'Junge', serif;
 }
 
-
-h1 {
-  font-size: 2em;
-  font-weight: lighter;
-}
-h2 {
-  font-weight: lighter;
-}
-
 p {
   margin: 1em 0;
+  color: #111;
 }
 
 a {
-  color: #3796AD;
+  color: #003;
   text-decoration: none;
 }
 
+
+
+.clear {
+  clear:both;
+}
+
+.fleft {
+  float:left;
+}
+
+.fright {
+  float:right;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+.margin-bottom {
+  margin-bottom: 1em;
+}
+
+
+
+
+.silent-header {
+  font-size: 1.6em;
+  font-weight: lighter;
+  margin-top: 0;
+}
+
+.home-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.home-top .silent-header {
+  margin: 0.6em;
+  padding: 0;
+}
+
+.post-header {
+  font-weight: lighter;
+  display: inline;
+  font-size: 1.3em;
+  margin-right: 0.5em;
+}
+
+.post-header-wrap {
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background:#222222;
+  border-top: 2px solid #47AAC2;
+  border-bottom: 1px solid #47AAC2;
+  line-height: 3em;
+}
+
+.post-header-wrap-inner {
+  margin: 0.3em 1em 0.3em 1em;
+}
+
+.post-meta {
+  color: #888;
+  font-family: 'Junge', serif;
+  font-size: 0.9em;
+  display: inline;
+  white-space: nowrap;
+}
+
+.post-back a {
+  line-height:0.33em;
+  display: block;
+  margin-right: 1em;
+}
+
+.post-header-wrap .post-header a {
+  color: #fff;
+}
+
 a:hover {
-  color: #395E7A;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -40,89 +114,75 @@ a:hover {
 
 ul.posts {
   list-style-type: none;
+  margin-top:2em;
   margin-bottom: 2em;
+  padding-left: 0;
 }
 
 ul.posts li {
   line-height: 1.75em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #CCC;
 }
 
-ul.posts li h2 {
-  font-weight: lighter;
-  display: inline;
-  font-size: 1.2em;
-}
-ul.posts li .post-meta {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 0.8em;
-  display: inline;
-  margin-left: 1em;
-}
-
-
-#nav-wrap {
+.logo {
   height: 3em;
-  padding:  0 1em;
-  color: #fefefe;
-  background: #303030;
-  display: block;
 }
-
-#logo {
-  height: 3em;
-  vertical-align: bottom;
-}
-
-#nav {
-  height:100%;
-  display:block;
-  max-width: 800px;
-  line-height: 3em;
-  margin: auto auto;
-}
-
-#nav > ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#nav > ul > li {
-  display: inline-block;
-  margin-left: 0.5em;
-}
-#nav > ul > li:first-child {
-  margin-left: 0;
-}
-
-#nav > ul > li > a {
-  display: inline-block;
-  color: inherit;
-}
-
 
 #content-wrap {
-  background: #fefefe url(bg.png) repeat;
+  padding-top: 4em;
+  background: #fafafa;
+  min-height:100%;
 }
 
 #content {
-  background-color: #fefefe;
   margin: auto auto;
   max-width: 800px;
   padding: 1em;
-  padding-bottom: 6em;
-  height: auto;
-  border: solid #DDDFDE;
-  border-width: 0 1px;
+  padding-bottom: 10em;
 }
 
+#misc {
+  margin: auto auto;
+  max-width: 800px;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+
+.card {
+  margin: 1em;
+  padding: 0.5em 0.8em;
+  font-size: 1.2em;
+  display: block;
+  background: #eaeaea;
+  border-radius: 1em;
+}
+.card:hover {
+  background: #fff;
+  transition: background 0.5s;
+}
+.card img {
+  vertical-align: middle;
+  margin-left: 1em;
+}
+a.card {
+  color: #222;
+}
+
+
+
+
+
+
 #foot-wrap {
-  color: #fff;
   padding: 1em;
   font-size: 1em;
   font-family: monospace;
+}
+#foot-wrap a {
+  color: #ccc;
+}
+#foot-wrap p {
+  color: #888;
 }
 
 footer {
@@ -134,8 +194,8 @@ footer {
   position: relative;
   display: block;
   margin: 2em 0;
-  border: 1px solid #444;
-  border-radius: 3px;
+  border: 1px solid #222;
+  border-radius: 0.5em;
 }
 
 .footer-fieldset hr {
@@ -162,7 +222,7 @@ footer {
   left: 0.5em;
   /*color: #44F599;*/
   color: #444;
-  background: #303030;
+  background: #0a0a0a;
   padding:0.1em 0.4em;
   margin: 0;
 }
@@ -172,13 +232,6 @@ footer {
   padding: 0;
   line-height: 1.5em;
 }
-
-
-
-#home h1 {
-  color: #555;
-}
-
 
 /* posts */ 
 /* standard */
@@ -190,25 +243,4 @@ footer {
 
 .post ul, .post ol {
   margin-left: 1.35em;
-}
-
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
-
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
 }
