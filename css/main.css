@@ -7,6 +7,7 @@ html, body {
 }
 
 body {
+  border-top: 4px solid #47AAC2;
   background-color: #0a0a0a;
   font-weight: lighter;
   font-size: 100%;
@@ -50,7 +51,6 @@ a {
 .silent-header {
   font-size: 1.6em;
   font-weight: lighter;
-  margin-top: 0;
 }
 
 .home-top {
@@ -66,9 +66,7 @@ a {
 }
 
 .post-header {
-  font-weight: lighter;
   display: inline;
-  font-size: 1.3em;
   margin-right: 0.5em;
 }
 
@@ -77,10 +75,8 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  background:#222222;
-  border-top: 2px solid #47AAC2;
-  border-bottom: 1px solid #47AAC2;
   line-height: 3em;
+  color: #222;
 }
 
 .post-header-wrap-inner {
@@ -101,9 +97,6 @@ a {
   margin-right: 1em;
 }
 
-.post-header-wrap .post-header a {
-  color: #fff;
-}
 
 a:hover {
   color: #000;
