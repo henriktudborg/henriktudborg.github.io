@@ -4,4 +4,4 @@ lsi: false
 markdown: redcarpet
 pygments: true
 permalink: "/articles/:year/:month/:day/:title"
-exclude: ["README.markdown"]
+exclude: ["README.md"]
