@@ -137,21 +137,34 @@ footer {
   border: 1px solid #444;
   border-radius: 3px;
 }
+
+.footer-fieldset hr {
+  height: 0;
+  border: none;
+  border-top: 1px solid #333;
+}
+
 .footer-fieldset-inner {
   position: relative;
   display: inline-block;
   margin: 0.2em .5em;
+}
+
+.footer-fieldset-inner:first-of-type {
   margin-top: 0.7em;
 }
 
 .footer-legend {
+  font-weight: normal;
+  display: inline-block;
   position: absolute;
   top: -0.7em;
   left: 0.5em;
-  color: #44F599;
+  /*color: #44F599;*/
+  color: #444;
   background: #303030;
-  padding:0.1em;
-  display: inline-block;
+  padding:0.1em 0.4em;
+  margin: 0;
 }
 
 .footer-fieldset-inner > p {
