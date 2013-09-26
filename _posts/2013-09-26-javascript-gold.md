@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tiny JavaScript event emitter"
+title:  "Tiny JavaScript observer snippet"
 categories: javascript, snippet
 ---
 
