@@ -229,12 +229,10 @@ footer {
 
 /* posts */ 
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-}
-
-.post ul, .post ol {
-  margin-left: 1.35em;
+.highlight {
+  border: 1px solid #eee;
+  background: #f7f7f7;
+  border-radius: 1em;
+  padding: 0 1em;
+  line-height: 1.15em;
 }
