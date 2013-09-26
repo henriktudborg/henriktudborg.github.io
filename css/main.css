@@ -135,6 +135,16 @@ ul.posts li {
   padding-bottom: 10em;
 }
 
+#content a {
+  text-decoration: underline;
+  padding: 0 0.2em;
+}
+#content a:hover {
+  border-radius: 0.2em;
+  background: #404040;
+  color: #fff;
+}
+
 #misc {
   margin: auto auto;
   max-width: 800px;
