@@ -20,7 +20,7 @@ p {
 }
 
 a {
-  color: #003;
+  color: #001;
   text-decoration: none;
 }
 
@@ -115,6 +115,7 @@ ul.posts {
 ul.posts li {
   line-height: 1.75em;
   border-bottom: 1px solid #CCC;
+  margin-bottom: 1em;
 }
 
 .logo {
