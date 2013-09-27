@@ -1,7 +1,9 @@
 ---
 layout: post
 title:  "Tiny JavaScript observer snippet"
-categories: javascript, snippet
+categories:
+    - javascript
+    - snippet
 ---
 
 Once in a while you stumble across those tiny snippets of code
