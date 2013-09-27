@@ -7,9 +7,152 @@ categories:
   - threading
 ---
 
+A few weeks ago i needed a python script to do a bunch of similar requests in parallel
+and return the results. I turned to [PyPI](https://pypi.python.org/pypi) for a simple
+little library to help me out. To my surprise i couldn't find what i was looking for
+(maybe due to PyPI's search being horrible, or my search terms, who knows).
+
+Two days later i published the first version of [asynckit][pypi] to PyPI.
+
+- - - - 
+
+So, what is asynckit?
+----------------------
+
+Asynckit is a tiny library that enables you to run your existing functions in parallel
+and retrieve the return values when the work completes.
+
+Tests are run at [Travis CI](https://travis-ci.org/) and [coveralls.io](https://coveralls.io/).
+
+
+### What to use it for?
+
+You could use asynckit to download a bunch of websites in parallel, like this:
+
+{% highlight python %}
+from asynckit import Pool
+from urllib2 import urlopen
+
+pool = Pool(worker_count=3)
+
+urls = (
+    'http://tudb.org',
+    'http://github.com',
+    'http://lzy.dk',
+)
+
+results = [pool.do(lambda x: urlopen(x).read(), url) for url in urls]
+
+print [len(result.get(True)) for result in results]
+{% endhighlight %}
+
+(the `.get(True)` call on the `result` blocks until result is ready, then returns the stored value)
+
+If one of the calls raised an exception, a call to `.get()` will re-raise it.
+You can check if a call raised an exception by calling `.is_error()` on the result object.
+
+When should you use it?
+-----------------------
+
+For those tiny python utilities in your `~/src/misc` or wherever you place your tiny hacks.
+
+Asynckit has no dependencies outside the standard library, so it is great if you try
+to keep dependencies to a minimum.
+
+It also installs in a few seconds ( `pip install asynckit` ) and requires no configuration.
+
+Personally i keep it installed globally and use it in most of my single-script python tools that i
+have build over the last month.
+
+I find it to be a really great companion for anything involving urllib2 work (like scraping a bunch of websites).
+
+
+When shouldn't you use it?
+--------------------------
+
+When you could use [Celery][celery] instead. Seriously, it is super awesome!
+
+Celery is better in almost every way, but requires an external message queue, and quite a bit of configuration.
+
+In most larger projects you will want to look at Celery or equivalent instead.
+
+
+- - - - - -
+
+Head over to [github.com/tbug/asynckit.py][github] to see installation instructions and usage, or hang around for a few more examples.
+
+
+Some Asynckit examples
+----------------------
 
 
 
+#### Download 8 sites in parallel, wait for all downloads to complete, then print total bytes downloaded:
 
-[github]:    https://github.com/tbug/asynckit.py
-[pypi]:      https://pypi.python.org/pypi?name=asynckit&version=0.3.2-r2491249&:action=display
+{% highlight python %}
+from asynckit import Pool, AsyncList
+from urllib2 import urlopen
+
+pool = Pool(worker_count=8)
+
+urls = (
+    'http://tudb.org',
+    'http://lzy.dk',
+    'http://etilbudsavis.dk',
+    'http://github.com'
+    # more urls here
+)
+
+result = AsyncList([pool.do(lambda x: len(urlopen(x).read()), url) for url in urls])
+
+print sum(result.get(True))
+{% endhighlight %}
+
+`AsyncList` accepts a list of AsyncValue objects as first argument returns
+a list of real values when calling `.get()`.
+
+
+#### Nested and chained results
+
+Using an AsyncValue as an argument to the `.do()` or `.chain()` methods
+will wait for that value to be ready before running the work that requires it.
+
+Chained work is a way of waiting for a result, without using it as an argument.
+Like a cleanup job, chained after some big work.
+
+(note that there is currently no way of chaining something to an AsyncList)
+
+{% highlight python %}
+from asynckit import Pool, AsyncList
+from urllib2 import urlopen
+
+pool = Pool(worker_count=1)
+
+def heavy_work(a,b):
+    return a+b
+
+def proudly_display(result):
+    print result.get(True)
+
+def say_bye():
+    print "bye"
+
+# nested example. Use an AsyncValue object as argument to .do()
+# ( .do() itself returns an AsyncValue )
+nested_call = pool.do(heavy_work, 1, 
+                pool.do(heavy_work, 2, 
+                    pool.do(heavy_work, 1, 3)))
+
+#chain example, say bye after proudly displaying the result, and wait for it all to happen
+pool.do(proudly_display, nested_call).chain(say_bye).wait()
+{% endhighlight %}
+
+See more examples and report any issues on [GitHub][github].
+
+
+
+[celery]:       http://www.celeryproject.org/
+[github]:       https://github.com/tbug/asynckit.py
+[pypi]:         https://pypi.python.org/pypi?name=asynckit&:action=display
+[coveralls]:    https://coveralls.io/r/tbug/asynckit.py?branch=master
+[travis]:       https://travis-ci.org/tbug/asynckit.py
