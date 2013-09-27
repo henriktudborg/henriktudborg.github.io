@@ -7,7 +7,6 @@ html, body {
 }
 
 body {
-  border-top: 4px solid #47AAC2;
   background-color: #0a0a0a;
   font-weight: lighter;
   font-size: 100%;
@@ -51,6 +50,14 @@ hr {
   margin-bottom: 1em;
 }
 
+.top-bar {
+  height: 4px;
+  background: #47AAC2;
+}
+.bottom-bar {
+  height: 4px;
+  background: #0a0a0a;
+}
 
 
 
@@ -136,14 +143,13 @@ ul.posts li {
 
 #content-wrap {
   position: relative;
-  padding-top: 4em;
   background: #fafafa;
   min-height:100%;
 }
 
 #content-tagline {
   position:absolute;
-  bottom: 0.1em;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: #222;
@@ -155,8 +161,7 @@ ul.posts li {
 #content {
   margin: auto auto;
   max-width: 800px;
-  padding: 1em;
-  padding-bottom: 10em;
+  padding: 5em 1em 10em 1em;
 }
 
 #content h1,h2,h3,h4,h5,h6 {
