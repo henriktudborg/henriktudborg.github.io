@@ -142,7 +142,7 @@ ul.posts li {
 
 #content-tagline {
   position:absolute;
-  bottom: 0.1em;
+  bottom: 0;
   width: 100%;
   text-align: center;
   color: #222;
