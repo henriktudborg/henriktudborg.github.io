@@ -24,6 +24,12 @@ a {
   text-decoration: none;
 }
 
+hr {
+  height: 1px;
+  border: none;
+  background: #C7DDE2;
+}
+
 
 
 .clear {
@@ -101,6 +107,7 @@ a {
   display: block;
   margin-right: 1em;
 }
+
 
 
 a:hover {
