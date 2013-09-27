@@ -141,6 +141,9 @@ ul.posts li {
   text-align: center;
   color: #222;
 }
+#content-tagline > span {
+  padding: 1em;
+}
 
 #content {
   margin: auto auto;
@@ -259,4 +262,5 @@ footer {
   border-radius: 1em;
   padding: 0 1em;
   line-height: 1.15em;
+  overflow-x: auto;
 }
