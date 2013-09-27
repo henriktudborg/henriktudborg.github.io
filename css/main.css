@@ -152,6 +152,25 @@ ul.posts li {
   padding-bottom: 10em;
 }
 
+#content h1,h2,h3,h4,h5,h6 {
+  font-weight: lighter;
+}
+#content h1 {
+  font-size: 1.6em;
+}
+#content h2 {
+  font-size: 1.3em;
+}
+#content h3 {
+  font-size: 1.2em;
+}
+#content h4 {
+  font-size: 1.1em;
+}
+#content h5 {
+  font-size: 1em;
+}
+
 #content a {
   text-decoration: underline;
   padding: 0 0.2em;
