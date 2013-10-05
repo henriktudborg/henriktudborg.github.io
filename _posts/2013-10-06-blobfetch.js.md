@@ -42,7 +42,7 @@ Note that a correct `Access-Control-Allow-Origin` header is needed.
 A few urls you could try:
 
 * `http://i.imgur.com/RW5QXyX.jpg`
-* `http://vjs.zencdn.net/v/oceans.mp4`
+* `http://vjs.zencdn.net/v/oceans.mp4` ( from [videojs.com](http://www.videojs.com/) )
 * `/assets/blobfetch.js/blobfetch.js`
 
 
