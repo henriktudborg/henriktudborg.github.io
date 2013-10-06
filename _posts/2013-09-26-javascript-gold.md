@@ -27,8 +27,8 @@ MicroEvent.prototype = {
     },
     once: function (event, fct) {
         var wrapper = function () {
-            fct.apply(this, Array.prototype.slice.call(arguments, 0));
             this.unbind(event, wrapper);
+            fct.apply(this, Array.prototype.slice.call(arguments, 0));
         };
         this.bind(event, wrapper);
     },
