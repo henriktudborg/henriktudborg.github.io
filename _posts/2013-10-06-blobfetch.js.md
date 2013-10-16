@@ -5,19 +5,23 @@ categories:
     - javascript
     - utility
     - xhr
+    - html5
+    - video
 ---
 
 Some time ago i needed to be able to seek to any point in a `<video>`,
 and i had to do this across 10-30 videos at the same time, all the time.
 Streaming the videos from a remote server made most browsers 
 buffer a few seconds forward, but not backwards, and loading them from
-a server without streaming support only allowed forward playback; no seeking at all!
+a server without streaming support allowed forward playback only; no seeking at all!
 
 Seeking in the video without having to re-buffer from server was essential,
-so a solution had to be found.
+and so the quest for a solution began (okay, a very short 60 minute-ish quest, but a quest, nonetheless!).
 
 BlobFetch.js
 =============
+
+And so i created BlobFetch.
 
 BlobFetch is a tiny library for fetching (large) objects as blobs.
 When downloaded, you can save with `LocalFileSystem` or use it directly
@@ -25,9 +29,9 @@ with `URL.createObjectURL`.
 
 Some highlights are:
 
-* progress callbacks
+* progress callbacks (well, dah)
 * abort download
-* MIME type assertion
+* MIME type assertion <span style="font-size:0.8em;">(fire error instead of success callback if you expected `video/mp4` but got `application/json`)</span>
 
 
 Example
