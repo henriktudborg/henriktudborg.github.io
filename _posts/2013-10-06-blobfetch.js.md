@@ -9,6 +9,10 @@ categories:
     - video
 ---
 
+Hacker News thread here: [https://news.ycombinator.com/item?id=6561451](https://news.ycombinator.com/item?id=6561451)
+
+- - - - 
+
 Some time ago i needed to be able to seek to any point in a `<video>`,
 and i had to do this across 10-30 videos at the same time, all the time.
 Streaming the videos from a remote server made most browsers 
