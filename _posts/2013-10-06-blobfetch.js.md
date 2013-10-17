@@ -104,6 +104,25 @@ var bf = BlobFetch({
 });
 ```
 
+### Abort a download
+```javascript
+var bf = BlobFetch({
+    url: 'http://vjs.zencdn.net/v/oceans.mp4',
+    progress: function () {
+        console.log((this.progress*100)+'% complete');
+    },
+    //the abort callback will be fired if someone aborts the download
+    abort: function () {
+        console.warn("You aborted the download!!");
+    }
+});
+
+//calling abort is as simple as
+bf.abort();
+```
+
+
+
 
 ### All of it
 
