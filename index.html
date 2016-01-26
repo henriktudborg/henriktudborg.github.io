@@ -2,17 +2,13 @@
 layout: default
 title: Articles
 ---
-
-<div id="home">
-    <div class="home-top">
-        <div class="home-top-inner">
-            <h1 class="silent-header">Newest Articles</h1>
+        <div id="home">
+            <h1>Articles</h1>
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <li class="post-list-item">
+                    {% include post-header.liquid %}
+                </li>
+                {% endfor %}
+            </ul>
         </div>
-    </div>
-    <ul class="posts">
-
-        {% for post in site.posts %}
-        <li>&raquo;&nbsp;{% include post-header.liquid %}</li>{% endfor %}
-
-    </ul>
-</div>

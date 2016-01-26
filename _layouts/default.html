@@ -3,61 +3,33 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>
-            {{ page.title }} - {{site.name}}
-        </title>
+        <title>{{ page.title }} - {{site.name}}</title>
         <meta name="viewport" content="width=device-width">
-        <!-- fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'>
-        <!-- syntax highlighting CSS -->
+        <!-- <link href='http://fonts.googleapis.com/css?family=Junge' rel='stylesheet' type='text/css'> -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
         <link rel="stylesheet" href="/css/syntax.css">
-        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/milligram.min.css">
         <link rel="stylesheet" href="/css/main.css">
-
         <link rel="alternate" type="application/atom+xml" title="tudb.org" href="/atom.xml">
     </head>
     <body>
-        <div id="content-wrap">
-            <div id="content">
-                {{content}}
-            </div>
-            <div id="content-tagline">
-                <span>
-                    I write about Python, PHP, JavaScript, scalability and cloud awesomeness.
-                </span>
+        <div id="footer">
+            <div id="footer-content">
+                <div class="local">
+                    <a href="/">Articles</a>
+                </div>
+                <div class="external">
+                    <span>My:</span>
+                    <a href="https://github.com/tbug">Github</a>
+                    <a href="https://www.linkedin.com/in/tudborg">LinkedIn</a>
+                    <a href="mailto:henrik@tudb.org">Email</a>
+                </div>
             </div>
         </div>
-
-        <div id="misc">
-
-            <a class="card" href="https://github.com/tbug">
-                <div class="fright">
-                    <img src="/images/github-mark-64.png" alt="GitHub profile link">
-                </div>
-                <p>My Github Profile</p>
-                <div class="clear"></div>
-            </a>
-        </div>
-
-        <div id="foot-wrap">
-            <footer>
-                <div class="footer-fieldset">
-                    <h4 class="footer-legend">about</h4>
-                    <div class="footer-fieldset-inner">
-                        <p>I am primarily a <strong>backend</strong> software engineer. (looking at you, recruiters!)</p>
-                    </div>
-                    <hr>
-                    <div class="footer-fieldset-inner">
-                        <p>I do backend stuff, like API design, cool image things, data crunching workers, etc.</p>
-                    </div>
-                </div>
-                <div class="footer-fieldset">
-                    <h4 class="footer-legend">contact</h4>
-                    <div class="footer-fieldset-inner">
-                        <p>Want to say 'hi'?&nbsp;&nbsp;<script>document.write("hen-rikx@xtuxd-b.xorxg".replace(/x|-/g,""))</script></p>
-                    </div>
-                </div>
-            </footer>
+        <div id="content">
+{{content}}
         </div>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

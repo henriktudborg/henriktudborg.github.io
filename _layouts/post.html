@@ -2,14 +2,7 @@
 layout: default
 ---
 <article class="post">
-    <div class="post-header-wrap">
-        <div class="post-header-wrap-inner">
-            <div class="post-back fleft">
-                <a href="/?ref=logo"><img class="logo" src="/css/icon.png" alt="back" /></a>
-            </div>
-            {% assign post = page %}{% include post-header.liquid %}
-        </div>
-    </div>
+    {% assign post = page %}{% include post-header.liquid %}
     <div class="clear"></div>
     <div class="post-content">
         {{ content }}
