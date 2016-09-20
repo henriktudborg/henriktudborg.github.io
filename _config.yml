@@ -1,7 +1,13 @@
 name: tudb.org
 safe: true
 lsi: false
-markdown: redcarpet
 highlighter: rouge
 permalink: "/articles/:year/:month/:day/:title"
 exclude: ["README.md"]
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
