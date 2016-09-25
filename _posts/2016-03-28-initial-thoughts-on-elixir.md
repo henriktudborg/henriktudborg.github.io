@@ -225,7 +225,7 @@ I'd love to try out releases sometime, but once again, deadlines.
 
 ### Libraries
 
-Finding good libraries are hard!
+Finding good libraries is hard!
 The options available is still quite limited, and the ones available is almost always
 terribly documented (and I'm not pointing fingers, My library lacks documentation as well).
 So expect to spend _way_ more time then you'd think, reading the source to figure out
