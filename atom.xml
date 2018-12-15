@@ -3,10 +3,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Henrik Tudborg</title>
-    <link href="http://tudb.org/atom.xml" rel="self"/>
-    <link href="http://tudb.org"/>
+    <link href="https://henriktudborg.dk/atom.xml" rel="self"/>
+    <link href="https://henriktudborg.dk"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>http://henriktudborg.dk</id>
+    <id>https://henriktudborg.dk</id>
     <author>
         <name>Henrik Tudborg</name>
         <email>henrik@tudb.org</email>
@@ -15,9 +15,9 @@
     {% for post in site.posts %}
     <entry>
         <title>{{ post.title }}</title>
-        <link href="http://henrktudborg.dk{{ post.url }}"/>
+        <link href="https://henrktudborg.dk{{ post.url }}"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>http://henrktudborg.dk{{ post.id }}</id>
+        <id>https://henrktudborg.dk{{ post.id }}</id>
         <content type="html">{{ post.content | xml_escape }}</content>
     </entry>
     {% endfor %}

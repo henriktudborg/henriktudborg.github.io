@@ -153,7 +153,7 @@ You can check the source of this page for an actual usage example.
 
 
 
-<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="/assets/blobfetch.js/blobfetch.js"></script>
 <script type="text/javascript">
     
