@@ -4,6 +4,7 @@ title:  "Initial Thoughts on Elixir"
 categories:
   - elixir
   - phoenix
+hidden: true
 ---
 
 I've been interested in working with elixir ever since I first learned about it.

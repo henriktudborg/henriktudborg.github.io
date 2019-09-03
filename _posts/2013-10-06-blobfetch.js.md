@@ -7,6 +7,7 @@ categories:
     - xhr
     - html5
     - video
+hidden: true
 ---
 
 Hacker News thread here: [https://news.ycombinator.com/item?id=6561451](https://news.ycombinator.com/item?id=6561451)

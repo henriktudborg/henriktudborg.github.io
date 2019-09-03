@@ -11,3 +11,4 @@ kramdown:
 gems:
   - jekyll-coffeescript
   - jekyll-paginate
+paginate: 10

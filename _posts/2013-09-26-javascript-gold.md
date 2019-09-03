@@ -4,6 +4,7 @@ title:  "Tiny JavaScript observer snippet"
 categories:
     - javascript
     - snippet
+hidden: true
 ---
 
 Once in a while you stumble across those tiny snippets of code
