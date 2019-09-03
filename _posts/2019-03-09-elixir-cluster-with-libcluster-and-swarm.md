@@ -200,7 +200,7 @@ We are going to create a deployment to manage replica-set and pods for us,
 and a ["headless" service][headless-service] to allow us to discover
 our cluster nodes via DNS (I'm using the default CoreDNS).
 
-Here are two objects we need (defined in the same file)
+Here are the two objects we need (defined in the same file)
 
 ```yaml
 # k8s.yml
