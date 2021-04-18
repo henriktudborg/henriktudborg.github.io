@@ -9,7 +9,6 @@
     <id>https://henriktudborg.dk</id>
     <author>
         <name>Henrik Tudborg</name>
-        <email>henrik@tudb.org</email>
     </author>
 
     {% for post in site.posts %}

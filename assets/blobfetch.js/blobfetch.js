@@ -1,6 +1,5 @@
 /***
 BlobFetch by Henrik Tudborg <henrik@tudb.org>
-http://tudb.org
 Public Domain, but be kind and leave this comment.
 ***/
 

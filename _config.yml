@@ -1,4 +1,4 @@
-name: henriktudborg.dk
+title: henriktudborg.dk
 safe: true
 lsi: false
 highlighter: rouge
@@ -8,7 +8,7 @@ github: [metadata]
 kramdown:
   input: GFM
   hard_wrap: false
-gems:
+plugins:
   - jekyll-coffeescript
   - jekyll-paginate
 paginate: 10
