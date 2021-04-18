@@ -19,57 +19,67 @@ body {
   color: #070707;
 }
 
-#content {
-  margin: auto auto;
-  max-width: 800px;
-  padding: 1em 1em 1em 1em;
-  margin-bottom: 42px;
-}
 
-#footer {
-  background: #f9f9f9;
-  border-top: 1px solid #f1f1f1;
-  /* height: 42px; */
-  line-height: 42px;
+header {
+  background: #1e66b5;
+  border-bottom: 1px solid #5396e0;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  padding: 0;
-  margin: 0;
+  line-height: 4rem;
+  display: flow-root;
 }
 
-#footer-content {
-  height: inherit;
+@media (min-width: 800px) {
+  header {
+    position: fixed;
+  }
+  main {
+    padding-top: 6rem;
+  }
+}
+
+#header-content {
+  padding: 0.1rem 1rem;
   margin: auto auto;
   max-width: 800px;
-  padding: 0 1em;
+  color: #ffffff;
+  clear: both;
 }
-#footer .local {
+
+#header-content a {
+  color: #ffffff;
+}
+#header-content a:hover {
+  color: #cccccc;
+}
+
+#site-title {
+  font-size: 22px;
   float: left;
 }
-#footer .external {
+
+#header-right {
   float: right;
 }
 
-#footer span {
-  color: #888;
-  margin-left: 1.4em;
-  margin-right: 0.4em;
+main {
+  margin: auto;
+  max-width: 800px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 
-#footer .external a {
-  margin-right: 1em;
-}
-
-#footer .external a:last-child {
-  margin-right: 0;
+#header-right a {
+  display: inline-block;
+  padding: 0rem 1rem;
+  text-decoration: underline;
 }
 
 
 .post-list-item {
   display: block;
   margin: 1.5em 0;
-  border-bottom: 2px solid #F1F1F1;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .post-header h2 {

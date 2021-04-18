@@ -8,21 +8,18 @@
         <link rel="alternate" type="application/atom+xml" title="henriktudborg.dk" href="/atom.xml">
     </head>
     <body>
-        <div id="footer">
-            <div id="footer-content">
-                <div class="local">
-                    <a href="/">Articles</a>
-                </div>
-                <div class="external">
-                    <span>My:</span>
+        <header>
+            <div id="header-content">
+                <a id="site-title" href="/">{{ site.title }}</a>
+                <div id="header-right">
                     <a href="https://github.com/tbug">Github</a>
                     <a href="https://www.linkedin.com/in/tudborg">LinkedIn</a>
                 </div>
             </div>
-        </div>
-        <div id="content">
+        </header>
+        <main>
 {{content}}
-        </div>
+        </main>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42827542-1"></script>
         <script>
