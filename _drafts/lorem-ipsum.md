@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Foo Bar"
+title: "Lorem Ipsum Test Post"
 categories:
 
 ---

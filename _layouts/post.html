@@ -5,6 +5,6 @@ layout: default
     {% assign post = page %}{% include post-header.liquid %}
     <div class="clear"></div>
     <div class="post-content">
-        {{ content }}
+        {% include anchor_headings.html html=content anchorBody="§" anchorClass="heading-anchor" %}
     </div>
 </article>
