@@ -2,7 +2,7 @@
 layout: post
 title: "Lorem Ipsum Test Post"
 categories:
-
+  - dummy
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempor ac nibh ut sollicitudin. Curabitur nulla risus, lacinia a quam ac, commodo tristique magna. Quisque blandit nunc tempor nibh facilisis, at imperdiet dolor lacinia. Sed odio erat, mattis et posuere sed, egestas id nibh. Curabitur diam dui, volutpat in gravida mollis, faucibus vitae odio. Fusce massa libero, mollis sit amet ligula non, mattis gravida purus. Cras ac nibh non est mollis porta eget eget felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eu magna iaculis, bibendum tellus id, pulvinar nulla.
